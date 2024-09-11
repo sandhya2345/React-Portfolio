@@ -33,7 +33,7 @@ const Contact = () => {
               LinkedIn
             </Button>
             <Button 
-              variant="contained" 
+              variant="contained"
               startIcon={<FaGithub />} 
               sx={{ backgroundColor: '#333', color: '#fff', textTransform: 'none' }}
               href="https://github.com/sandhya2345" 
