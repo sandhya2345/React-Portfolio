@@ -1,0 +1,89 @@
+{
+    
+
+
+    "about": {
+      "title": "About Me",
+      "content": "Hello! I'm Sandhya Timalsena, an aspiring frontend developer with a growing passion for creating interactive and visually appealing web applications. As a beginner in React, I'm excited about the possibilities it offers for building dynamic user interfaces and managing state effectively. My journey in web development also includes a solid foundation in HTML, CSS, and JavaScript, where I enjoy crafting well-structured and responsive web pages.In addition to my frontend skills, I have experience with Django, a powerful Python web framework that I use to build robust backend systems. This blend of frontend and backend expertise allows me to create comprehensive web solutions, bridging the gap between user experience and server-side functionality."
+    },
+
+    "skills": [
+      {
+        "name": "HTML",
+        "proficiency": 90
+      },
+      {
+        "name": "CSS",
+        "proficiency": 85
+      },
+      {
+        "name": "JavaScript",
+        "proficiency": 75
+      },
+      {
+        "name": "React",
+        "proficiency": 70
+      },
+
+      {
+        "name":"Django",
+        "proficiency":75
+      }
+    ],
+
+    "projects": [
+      {
+        "title": "Pathyakarma Landing",
+        "image": "/assets/PathyakarmaLanding.png",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "category": "Web Design"
+      },
+      {
+        "title": "PG Lifestyle",
+        "image":"/assets/PG_Lifestyle.png",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title":"Pet Adoption Website",
+        "image": "/assets/petAdoption.png",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title": "Contentium Landing Page",
+        "image": "/assets/PG_Lifestyle.png",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title": "Bonsai Hub",
+        "image":"/assets/Bonsai.png",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title":"something",
+        "image": "/assets/pic1.jpg",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title": "Contentium Landing Page",
+        "image": "/assets/PG_Lifestyle.png",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title": "Bonsai Hub",
+        "image":"/assets/Bonsai.png",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "title":"something",
+        "image": "/assets/pic1.jpg",
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+
+    ]
+    
+
+
+    
+    
+  }
+  
