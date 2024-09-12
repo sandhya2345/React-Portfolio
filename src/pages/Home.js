@@ -5,15 +5,20 @@ import { OrbitControls } from '@react-three/drei';
 import Moon from '../pages/Moon';  
 import { keyframes } from '@emotion/react';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa'; 
+import portfolioData from '../utils/portfolioData.json'
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
+    setData(portfolioData.home);
     setTimeout(() => {
       setIsVisible(true);
     }, 100);
   }, []);
+
+  if (!data) return null;
 
   const fadeIn = keyframes`
     from {
@@ -102,7 +107,6 @@ const Home = () => {
         />
       ))}
 
-      {/* Animated Text Box */}
       <Box
         sx={{
           ...fadeInStyle,
@@ -129,7 +133,7 @@ const Home = () => {
             opacity: 0,
           }}
         >
-          Sandhya Timalsena
+        {data.name}
         </Typography>
         <Typography
           variant="h6"
@@ -139,10 +143,10 @@ const Home = () => {
             animation: `${fadeIn} 1s ease-out forwards`,
             animationDelay: '1s',
             opacity: 0,
+            fontFamily:'Poppins'
           }}
         >
-          I craft beautiful and interactive user interfaces using React, HTML, and CSS. 
-          Bringing designs to life with seamless animations and responsive layouts.
+         {data.descriptions}
         </Typography>
 
         <Box
@@ -155,13 +159,13 @@ const Home = () => {
           <a href="https://github.com/sandhya2345" target="_blank" rel="noopener noreferrer">
             <FaGithub size={24} color="#fff" />
           </a>
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={24} color="#fff" />
           </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={24} color="#fff" />
           </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FaFacebook size={24} color="#fff" />
           </a>
         </Box>

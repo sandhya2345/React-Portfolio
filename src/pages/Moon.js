@@ -6,8 +6,6 @@ import moonTexture from '../moon.jpg';
 
 const Moon = () => {
   const moonRef = useRef();
-  
-
   const texture = useLoader(TextureLoader, moonTexture);
 
 

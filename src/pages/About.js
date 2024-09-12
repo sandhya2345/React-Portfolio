@@ -11,10 +11,10 @@ import {
   TimelineOppositeContent,
 } from "@mui/lab";
 import { keyframes } from '@mui/system';
-import { FaHtml5, FaReact, FaNodeJs, FaJava} from 'react-icons/fa';
+import { FaHtml5, FaReact, FaNodeJs, FaJava } from 'react-icons/fa';
 import { SiDjango, SiExpress, } from 'react-icons/si';
 
-const growAnimation = keyframes`
+const animatedBox = keyframes`
   0% {
     width: 100px;
     height: 50px;
@@ -59,158 +59,199 @@ const About = () => {
   return (
     <Container maxWidth={false} disableGutters={true} sx={{ padding: 0, margin: 0, width: '100vw', height: '100vh' }}>
 
-      <Box component="section" sx={{
-        display: 'flex',
-        width: '100%',
-        height: '90vh',
-        padding: 2,
-        paddingLeft: 12,
-        paddingRight: 12,
-      }}>
-        <Box sx={{
-          flex: 1,
-          paddingRight: 2,
-        }}>
-          <Typography variant='h1' marginBottom={2} color='#8689cd'>{data.title} </Typography>
-          <Box component="section" sx={{ mr: 10 }}>
-            <Typography variant='h6' color='#DDDDDD'>{data.content}</Typography>
+      <Box
+        component="section"
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          width: '100%',
+          height: { xs: '90vh', md: '90vh' },
+          padding: { xs: 2, md: 12 },
+        }}
+      >
+
+        <Box
+          sx={{
+            flex: 1,
+            paddingRight: { xs: 0, md: 2 },
+            textAlign: { md: 'left' },
+            marginTop: { xs: '-10px', md: '-50px' },
+          }}
+        >
+          <Typography
+            variant="h1"
+            color="#8689cd"
+            sx={{
+              fontSize: { md: 'inherit' },
+            }}
+          >
+            {data.title}
+          </Typography>
+
+          <Box component="section" sx={{ marginRight: { xs: 0, md: 10 } }}>
+            <Typography
+              variant="h6"
+              color="#DDDDDD"
+              marginBottom={10}
+              fontFamily="Poppins"
+              sx={{
+                fontSize: { xs: '1rem', md: '1.2rem' },
+              }}
+            >
+              {data.content}
+            </Typography>
           </Box>
         </Box>
 
 
         <Box
-      sx={{
-        width: isVisible ? '400px' : '100px',
-        height: isVisible ? '70%' : '50px',
-        backgroundColor: '#202020',
-        borderRadius: '8px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 8,
-        boxShadow: '12px 18px 20px 12px #8689cd',
-        animation: `${growAnimation} 1s ease-out forwards`, 
-        padding:2,
-        gap: 2,
-      }}
-    >
-      <FaHtml5 size={40} color="#E34F26" />
-      <FaReact size={40} color="#61DBFB" />
-      <SiDjango size={40} color="#092E20" />
-      <FaNodeJs size={40} color="#3C873A" />
-      <SiExpress size={40} color="#000000" />
-    
-    </Box>
+          sx={{
+            width: isVisible ? '400px' : '100px',
+            height: isVisible ? '70%' : '50px',
+            backgroundColor: '#202020',
+            borderRadius: '8px',
+            display: {xs:'none', md:'flex'},
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: 8,
+            boxShadow: '12px 12px  12px #8689cd',
+            animation: `${animatedBox} 1s ease-out forwards`,
+            padding: 2,
+            gap: 2,
+          }}
+        >
+          <FaHtml5 size={40} color="#E34F26" />
+          <FaReact size={40} color="#61DBFB" />
+          <SiDjango size={40} color="#092E20" />
+          <FaNodeJs size={40} color="#3C873A" />
+          <SiExpress size={40} color="#000000" />
 
+        </Box>
       </Box>
 
       <Box
-  component="section"
-  sx={{
-    width: '100%',
-    height: '80vh',
-    backgroundColor: '#8689cd', 
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '40px',
-    boxSizing: 'border-box',
-  }}
->
-  <Typography variant="h2" sx={{ color: '#EAEAEA', marginBottom: '24px', fontWeight: 'bold', left:'%'}}>
-    Technical Skills
-  </Typography>
+        component="section"
+        sx={{
+          width: '100%',
+          height: '80vh',
+          backgroundColor: '#8689cd',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'left',
+          padding: { xs: '20px', sm: '40px', md: '80px' },
+          boxSizing: 'border-box',
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{
+            color: '#ffffff',
+            marginBottom: { xs: '16px', sm: '24px', md: '36px' },
+            fontFamily: 'Poppins',
+            fontSize: { xs: '24px', sm: '32px', md: '50px' },
+          }}
+        >
+          Technical Skills
+        </Typography>
 
-  <Box
-    sx={{
-      display: 'flex',
-      flexDirection: 'row',
-      width: '100%',
-      gap: '24px',
-      justifyContent: 'center',
-      marginBottom: '24px',
-    }}
-  >
-    <Box sx={{ width: '60%' }}>
-      {skills.map((skill, index) => (
         <Box
-          key={skill.name}
           sx={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginBottom: '16px',
+            flexDirection: { xs: 'column', md: 'row' },
             width: '100%',
-          }}
-        >
-          <Typography variant="h6" sx={{ color: '#EAEAEA', width: '20%' }}>
-            {skill.name}
-          </Typography>
-
-          <Slider
-            value={skill.proficiency}
-            min={0}
-            max={100}
-            step={1}
-            sx={{ width: '60%', marginLeft: '16px' }}
-            valueLabelDisplay="auto"
-            onChange={(event, newValue) => handleSliderChange(event, newValue, index)}
-          />
-
-          <Rating
-            value={Math.round(skill.proficiency / 20)}
-            onChange={(event, newValue) => handleRatingChange(event, newValue, index)}
-            max={5}
-            precision={0.5}
-            sx={{ marginLeft: '16px' }}
-          />
-        </Box>
-      ))}
-    </Box>
-
-    <Box
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-        gap: '24px',
-        width: '40%',
-      }}
-    >
-      {[
-        { icon: <FaHtml5 size={40} color="#E34F26" />, label: 'HTML' },
-        { icon: <SiDjango size={40} color="#092E20" />, label: 'Django' },
-        { icon: <FaReact size={40} color="#61DBFB" />, label: 'React' },
-        { icon: <FaJava size={40} color="#3C873A" />, label: 'Java' },
-        { icon: <FaJava size={40} color="#3C873A" />, label: 'Java' },
-        { icon: <FaJava size={40} color="#3C873A" />, label: 'Java' },
-      ].map((tech) => (
-        <Box
-          key={tech.label}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            gap: '24px',
             justifyContent: 'center',
-            padding: '16px',
-            backgroundColor: '#2C2C34',
-            borderRadius: '8px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-            transition: 'transform 0.3s, box-shadow 0.3s',
-            '&:hover': {
-              transform: 'scale(1.05)',
-              boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
-            },
+            marginBottom: '24px',
           }}
         >
-          {tech.icon}
-          <Typography variant="h6" sx={{ color: '#EAEAEA', marginTop: '8px' }}>
-            {tech.label}
-          </Typography>
+          <Box sx={{ width: { xs: '100%', md: '50%' } }}>
+            {skills.map((skill, index) => (
+              <Box
+                key={skill.name}
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '16px',
+                  paddingRight: '20px',
+                  width: '100%',
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: '#EAEAEA',
+                    width: '20%',
+                    paddingRight: { xs: '20px', sm: '30px', md: '50px' },
+                  }}
+                >
+                  {skill.name}
+                </Typography>
+
+                <Slider
+                  value={skill.proficiency}
+                  min={0}
+                  max={100}
+                  step={1}
+                  sx={{ width: { xs: '50%', md: '60%' }, marginLeft: '16px' }}
+                  valueLabelDisplay="auto"
+                  onChange={(event, newValue) => handleSliderChange(event, newValue, index)}
+                />
+
+                <Rating
+                  value={Math.round(skill.proficiency / 20)}
+                  onChange={(event, newValue) => handleRatingChange(event, newValue, index)}
+                  max={5}
+                  precision={0.5}
+                  sx={{ marginLeft: '16px' }}
+                />
+              </Box>
+            ))}
+          </Box>
+
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: 'repeat(2, 1fr)', md: 'repeat(auto-fit, minmax(140px, 1fr))' },
+              gap: '24px',
+              width: { xs: '100%', md: '40%' },
+            }}
+          >
+            {[
+              { icon: <FaHtml5 size={40} color="#E34F26" />, label: 'HTML' },
+              { icon: <SiDjango size={40} color="#092E20" />, label: 'Django' },
+              { icon: <FaReact size={40} color="#61DBFB" />, label: 'React' },
+              { icon: <FaJava size={40} color="#3C873A" />, label: 'Java' },
+
+            ].map((tech) => (
+              <Box
+                key={tech.label}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '16px',
+                  backgroundColor: '#2C2C34',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                  transition: 'transform 0.3s, box-shadow 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
+                  },
+                }}
+              >
+                {tech.icon}
+                <Typography variant="h6" sx={{ color: '#EAEAEA', marginTop: '8px' }}>
+                  {tech.label}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
         </Box>
-      ))}
-    </Box>
-  </Box>
-</Box>
+      </Box>
+
 
 
 
@@ -226,9 +267,10 @@ const About = () => {
           padding: 6,
           paddingLeft: 12,
           justifyContent: "center",
+          fontFamily: 'Poppins'
         }}
       >
-        <Typography variant="h3" sx={{ marginBottom: 6 }}>
+        <Typography variant="h3" fontFamily='Poppins' sx={{ marginBottom: 6, }}>
           Education Background
         </Typography>
 
@@ -237,7 +279,7 @@ const About = () => {
         >
 
           <Box sx={{ width: "50%" }}>
-            <Typography variant="h4" marginBottom={2}>
+            <Typography variant="h4" fontFamily="Poppins" marginBottom={2} >
               Higher Secondary Education:
               <Divider style={{ backgroundColor: "white", width: "75%" }} />
             </Typography>
@@ -277,7 +319,7 @@ const About = () => {
 
 
           <Box sx={{ width: "50%" }}>
-            <Typography variant="h4" marginBottom={2}>
+            <Typography variant="h4" fontFamily='Poppins' marginBottom={2}>
               BSc(Hons) Computing:
               <Divider style={{ backgroundColor: "white", width: "60%" }} />
             </Typography>
@@ -383,7 +425,7 @@ const About = () => {
             marginRight: 16,
           }}
         >
-          <Typography variant='h4' marginBottom={4}>Designing Solutions, Not <br /> Just Visuals</Typography>
+          <Typography variant='h4' marginBottom={4} fontFamily='Poppins'>Designing Solutions, Not <br /> Just Visuals</Typography>
 
           <Box
             sx={{
@@ -394,10 +436,10 @@ const About = () => {
               marginBottom: 3,
             }}
           >
-            <Typography variant="body1" sx={{ color: '#000000' }}>
-              8+ Completed Projects
+            <Typography variant="body1" sx={{ color: '#000000', fontFamily: 'Poppins' }}>
+              {data.title2}
               <br />
-              What is Lorem ipsum. Lorem ipsum is simply dummy text of the printing and typesetting industry.
+            {data.content2}
             </Typography>
           </Box>
 
@@ -409,10 +451,10 @@ const About = () => {
               marginBottom: 3,
             }}
           >
-            <Typography variant="body1" sx={{ color: '#000000' }}>
-              5+ Years of Experience
+            <Typography variant="body1" sx={{ color: '#000000', fontFamily: 'Poppins' }}>
+              {data.title3}
               <br />
-              What is Lorem ipsum. Lorem ipsum is simply dummy text of the printing and typesetting industry.
+             {data.content3}
             </Typography>
           </Box>
 
@@ -424,7 +466,8 @@ const About = () => {
               padding: '10px 20px',
 
             }}
-            href="/assets/SandhyaTimalsenaCV.pdf"
+            href="/assets/SandhyaTimalsena.pdf"
+            download="SandhyaTimalsena.pdf"
           >
             Download CV
           </Button>

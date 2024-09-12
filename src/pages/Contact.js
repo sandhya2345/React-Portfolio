@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Box, Typography, TextField, Button } from '@mui/material';
-import { FaLinkedin, FaGithub } from 'react-icons/fa'; 
+import { FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'; 
+import { IoMdMail } from "react-icons/io";
+import portfolioData from '../utils/portfolioData.json'
 
 const Contact = () => {
+
+  const[data,setData]= useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() =>{
+    setData(portfolioData.contact);
+    setIsVisible(true);
+  }, []);
+
+  if (!data) return null;
+
+
+
   return (
     <Container maxWidth="lg"  sx={{ backgroundColor: '#202020', padding: '50px' }}>
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start', gap: 4, marginBottom: 4, fontFamily:'Poppins' }}>
         
         <Box sx={{ flex: 1 }}>
           <Typography variant="h3" sx={{ fontWeight: 'bold', color: '#ffffff', mb: 3 }}>
-           Hi there, Looking forword to work with you!
+           {data.intro}
           </Typography>
-          <Typography variant="body1" sx={{ color: 'gray', mb: 4 }}>
-          I’m eager to work with dedicated individuals and teams. I approach every project with full attention and a strong desire to learn and grow. Together, we can create something meaningful and impactful.
+          <Typography variant="body1" sx={{ color: '#fff', mb: 4, fontFamily:'Poppins' }}>
+            {data.desc}
           </Typography>
-          <Typography variant="body2" sx={{ color: '#fff', mb: 1 }}>
-            📧 sandhyatimalsena29@gmail.com
+          <Typography variant="body2" sx={{ color: '#fff', mb: 1 , fontFamily: 'Poppins'}}>
+          <IoMdMail /> {data.email}
           </Typography>
-          <Typography variant="body2" sx={{ color: '#fff', mb: 3 }}>
-            📞 +977-9811078292
+          <Typography variant="body2" sx={{ color: '#fff', mb: 3, fontFamily:'Poppins' }}>
+            <FaPhone/> {data.phone}
           </Typography>
           
 
@@ -51,19 +66,25 @@ const Contact = () => {
               variant="outlined"
               fullWidth
               required
+              InputLabelProps={{ style: { color: '#fff' } }}
+              InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
             />
-            <Box sx={{ display: 'flex', gap: 2}}>
+            <Box sx={{ display: 'flex', gap: 2 }}>
               <TextField
                 label="First Name"
                 variant="outlined"
                 fullWidth
                 required
+                InputLabelProps={{ style: { color: '#fff' } }}
+                InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
               />
               <TextField
                 label="Last Name"
                 variant="outlined"
                 fullWidth
                 required
+                InputLabelProps={{ style: { color: '#fff' } }}
+                InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
               />
             </Box>
             <Box sx={{ display: 'flex', gap: 2 }}>
@@ -72,11 +93,15 @@ const Contact = () => {
                 variant="outlined"
                 fullWidth
                 required
+                InputLabelProps={{ style: { color: '#fff' } }}
+                InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
               />
               <TextField
                 label="Phone number"
                 variant="outlined"
                 fullWidth
+                InputLabelProps={{ style: { color: '#fff' } }}
+                InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
               />
             </Box>
             <TextField
@@ -86,8 +111,10 @@ const Contact = () => {
               rows={4}
               fullWidth
               required
+              InputLabelProps={{ style: { color: '#fff' } }}
+              InputProps={{ style: { backgroundColor: '#8689cd', color: '#fff' } }}
             />
-            <Button variant="contained" color="#202020" sx={{ padding: '12px', backgroundColor: '#ffffff', textTransform: 'none' }}>
+            <Button variant="contained" sx={{ padding: '12px', backgroundColor: '#8689cd', color: '#fff', textTransform: 'none' }}>
               Submit Enquiry
             </Button>
           </Box>

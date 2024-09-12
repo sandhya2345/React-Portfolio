@@ -16,7 +16,7 @@ const Navbar = () => {
         position="static" 
         color="transparent" 
         elevation={0} 
-        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}
+        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative'}}
       >
         <Toolbar style={{ display: 'flex', width: '100%', maxWidth: 1200, alignItems: 'center', justifyContent: 'center' }}>
           <IconButton 

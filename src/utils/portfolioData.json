@@ -1,10 +1,18 @@
 {
-    
+  "home": {
+    "name": "Sandhya Timalsena",
+    "descriptions": "I craft beautiful and interactive user interfaces using React, HTML, and CSS. Bringing designs to life with seamless animations and responsive layouts."
+  },
+  
 
-
+  
     "about": {
       "title": "About Me",
-      "content": "Hello! I'm Sandhya Timalsena, an aspiring frontend developer with a growing passion for creating interactive and visually appealing web applications. As a beginner in React, I'm excited about the possibilities it offers for building dynamic user interfaces and managing state effectively. My journey in web development also includes a solid foundation in HTML, CSS, and JavaScript, where I enjoy crafting well-structured and responsive web pages.In addition to my frontend skills, I have experience with Django, a powerful Python web framework that I use to build robust backend systems. This blend of frontend and backend expertise allows me to create comprehensive web solutions, bridging the gap between user experience and server-side functionality."
+      "content": "Hello! I'm Sandhya Timalsena, an aspiring frontend developer with a growing passion for creating interactive and visually appealing web applications. As a beginner in React, I'm excited about the possibilities it offers for building dynamic user interfaces and managing state effectively. My journey in web development also includes a solid foundation in HTML, CSS, and JavaScript, where I enjoy crafting well-structured and responsive web pages.In addition to my frontend skills, I have experience with Django, a powerful Python web framework that I use to build robust backend systems. This blend of frontend and backend expertise allows me to create comprehensive web solutions, bridging the gap between user experience and server-side functionality.",
+      "title2":"8+ Completed Projects",
+      "content2":"I’ve developed diverse projects using technologies like Node.js, HTML, CSS, and JavaScript, including websites and interactive platforms.",
+      "title3":" Years of Experience",
+      "content3":"Extensive hands-on experience in web development, complemented by internships where I gained valuable skills and knowledge in various technologies."
     },
 
     "skills": [
@@ -33,30 +41,30 @@
 
     "projects": [
       {
-        "title": "Pathyakarma Landing",
+        "title": "Pathyakarma",
         "image": "/assets/PathyakarmaLanding.png",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "description": "The Pathyakrama website, created with Django and Tailwind CSS, serves as an educational platform featuring a college news section and a company section. It offers users up-to-date educational news and insights into key industry players, all within a clean and user-friendly design.",
         "category": "Web Design"
       },
       {
         "title": "PG Lifestyle",
         "image":"/assets/PG_Lifestyle.png",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description":"PG Lifestyle is a brand specializing in mattresses, sofas, and cushions. For this project, I worked on the frontend using HTML, Tailwind CSS, and JavaScript to create a visually appealing and responsive design. Additionally, I contributed to the backend using Django to ensure smooth functionality and integration with the website's features."
       },
       {
         "title":"Pet Adoption Website",
         "image": "/assets/petAdoption.png",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description":"Help Me! is a pet adoption website developed as a second-year project. The site was built using HTML and SCSS for the frontend, creating a clean and stylish interface, while Node.js was used for the backend to manage functionality and data. The platform facilitates pet adoption by providing an intuitive interface for users to browse and adopt pets."
       },
       {
-        "title": "Contentium Landing Page",
-        "image": "/assets/PG_Lifestyle.png",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "title": "Lapbuy",
+        "image": "/assets/lapbuy.png",
+        "description": "Lapbuy is an e-commerce website focused on selling laptops. For this project, I worked on implementing authentication features and developing the About Us page. The site was built using Java with Eclipse for backend development and HTML/CSS for frontend design, ensuring a secure and user-friendly shopping experience."
       },
       {
         "title": "Bonsai Hub",
         "image":"/assets/Bonsai.png",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        "description":"Bonsai Hub is an e-commerce website dedicated to selling bonsai trees. As the group leader, I led the development of the site using HTML, CSS, and JavaScript to create a seamless and visually appealing shopping experience. The platform offers a user-friendly interface for browsing and purchasing a variety of bonsai, reflecting both functionality and aesthetic design"
       },
       {
         "title":"something",
@@ -79,7 +87,16 @@
         "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
       }
 
-    ]
+    ],
+
+    "contact": 
+      {
+        "intro":" Hi there, Looking forward to working with you!",
+        "desc":"   I'm eager to work with dedicated individuals and teams. I approach every project with full attention and a strong desire to learn and grow. Together, we can create something meaningful and impactful.",
+        "email":"sandhyatimalsena29@gmail.com",
+        "phone":"+977-9811078292"
+      }
+    
     
 
 

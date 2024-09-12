@@ -31,7 +31,7 @@ const Projects = () => {
 
   return (
     <Container maxWidth={false} disableGutters sx={{ textAlign: 'center', padding: 4, backgroundColor: '#202020' }}>
-      <Typography variant="h4" component="div" color="#ffffff" gutterBottom>
+      <Typography variant="h4" component="div" color="#8689cd" gutterBottom>
         Portfolio
       </Typography>
       <Typography variant="h5" component="div" color="#ffffff" gutterBottom>
@@ -46,11 +46,11 @@ const Projects = () => {
             color="primary"
             sx={{
               mx: 1,
-              backgroundColor: filter === category ? '#ffffff' : 'transparent',
-              color: filter === category ? '#000' : '#ffffff',
-              borderColor: '#ffffff',
+              backgroundColor: filter === category ? '#8689cd' : 'transparent',
+              color: filter === category ? '#000' : '#8689cd',
+              borderColor: '#8689cd',
               '&:hover': {
-                backgroundColor: '#ffffff',
+                backgroundColor: '#8689cd',
               },
             }}
             onClick={() => handleFilterChange(category)}
@@ -60,7 +60,7 @@ const Projects = () => {
         ))}
       </Box>
 
-      {/* Project Cards */}
+  
       <Box
         sx={{
           display: 'flex',
@@ -90,7 +90,7 @@ const Projects = () => {
               width: '100%',
               backgroundColor: '#1c1c1e',
               color: '#fff',
-              borderRadius: '20px',
+              borderRadius: '10px',
               overflow: 'hidden',
               border: '2px solid gray',
               transition: 'transform 0.3s',
@@ -106,7 +106,7 @@ const Projects = () => {
                 sx={{ objectFit: 'cover', transition: 'transform 0.5s', '&:hover': { transform: 'scale(1.1)' } }}
               />
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div" color="#ffffff" fontWeight="bold">
+                <Typography gutterBottom variant="h6" component="div" color="#ffffff">
                   {project.title}
                 </Typography>
                 <Accordion sx={{ backgroundColor: '#1c1c1e', boxShadow: 'none', color: '#fff', borderRadius: '0px' }}>
