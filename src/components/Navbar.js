@@ -31,10 +31,10 @@ const Navbar = () => {
           <div 
             style={{
               display: isNavVisible ? 'flex' : 'none',
-              width: '100%',
+              width:'100%',
               justifyContent: 'center',
               transition: 'opacity 0.5s ease-out',
-              gap:'6rem',
+              gap:'7rem',
             }}
           >
             <Button variant='text' color="inherit" component={Link} to="/" style={{ fontSize: '16px', color: '#ffffff' }}>Home</Button>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Box, Typography, TextField, Button } from '@mui/material';
+import { Container, Box, Typography, TextField, Button, keyframes } from '@mui/material';
 import { FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa'; 
 import { IoMdMail } from "react-icons/io";
 import portfolioData from '../utils/portfolioData.json'
+import { Opacity } from '@mui/icons-material';
 
 const Contact = () => {
 
@@ -17,22 +18,34 @@ const Contact = () => {
   if (!data) return null;
 
 
+  const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
   return (
-    <Container maxWidth="lg"  sx={{ backgroundColor: '#202020', padding: '50px' }}>
-      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start', gap: 4, marginBottom: 4, fontFamily:'Poppins' }}>
+    <Container maxWidth="lg"  sx={{ backgroundColor: '#202020', padding: '50px',  }}>
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start', gap: 4, marginBottom: 4, fontFamily:'Poppins',  animation: `${fadeInUp} 1.5s ease-out`,  
+              animationDelay: isVisible ? '0s' : '0s',
+              animationFillMode: 'forwards' }}>
         
-        <Box sx={{ flex: 1 }}>
-          <Typography variant="h3" sx={{ fontWeight: 'bold', color: '#ffffff', mb: 3 }}>
+        <Box sx={{ flex: 1}}>
+          <Typography variant="h3" sx={{ fontWeight: 'bold', color: '#ffffff', mb: 3,    }}>
            {data.intro}
           </Typography>
-          <Typography variant="body1" sx={{ color: '#fff', mb: 4, fontFamily:'Poppins' }}>
+          <Typography variant="body1" sx={{ color: '#fff', mb: 4, fontFamily:'Poppins', }}>
             {data.desc}
           </Typography>
-          <Typography variant="body2" sx={{ color: '#fff', mb: 1 , fontFamily: 'Poppins'}}>
+          <Typography variant="body2" sx={{ color: '#fff', mb: 1 , fontFamily: 'Poppins',}}>
           <IoMdMail /> {data.email}
           </Typography>
-          <Typography variant="body2" sx={{ color: '#fff', mb: 3, fontFamily:'Poppins' }}>
+          <Typography variant="body2" sx={{ color: '#fff', mb: 3, fontFamily:'Poppins' ,  }}>
             <FaPhone/> {data.phone}
           </Typography>
           
@@ -41,7 +54,7 @@ const Contact = () => {
             <Button 
               variant="contained" 
               startIcon={<FaLinkedin />} 
-              sx={{ backgroundColor: '#0072b1', color: '#fff', textTransform: 'none' }}
+              sx={{ backgroundColor: '#0072b1', color: '#fff', textTransform: 'none',   }}
               href="https://www.linkedin.com/in/sandhya-timalsena-4077622a3/" 
               target="_blank"
             >
@@ -50,7 +63,7 @@ const Contact = () => {
             <Button 
               variant="contained"
               startIcon={<FaGithub />} 
-              sx={{ backgroundColor: '#333', color: '#fff', textTransform: 'none' }}
+              sx={{ backgroundColor: '#333', color: '#fff', textTransform: 'none',  }}
               href="https://github.com/sandhya2345" 
               target="_blank"
             >

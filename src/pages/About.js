@@ -82,7 +82,7 @@ const About = () => {
             variant="h1"
             color="#8689cd"
             sx={{
-              fontSize: { md: 'inherit' },
+              fontSize: { md: '6rem', marginBottom: '15px'},
             }}
           >
             {data.title}
@@ -138,17 +138,17 @@ const About = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'left',
-          padding: { xs: '20px', sm: '40px', md: '80px' },
+          padding: { xs: '20px', sm: '40px', md: '90px' },
           boxSizing: 'border-box',
         }}
       >
         <Typography
           variant="h3"
           sx={{
-            color: '#ffffff',
+            color: '#fff',
             marginBottom: { xs: '16px', sm: '24px', md: '36px' },
             fontFamily: 'Poppins',
-            fontSize: { xs: '24px', sm: '32px', md: '50px' },
+            fontSize: { xs: '24px', sm: '32px', md: '40px' },
           }}
         >
           Technical Skills
@@ -160,11 +160,11 @@ const About = () => {
             flexDirection: { xs: 'column', md: 'row' },
             width: '100%',
             gap: '24px',
-            justifyContent: 'center',
+            justifyContent: 'left',
             marginBottom: '24px',
           }}
         >
-          <Box sx={{ width: { xs: '100%', md: '50%' } }}>
+          <Box sx={{ width: { xs: '100%', md: '60%' } }}>
             {skills.map((skill, index) => (
               <Box
                 key={skill.name}
@@ -180,7 +180,7 @@ const About = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: '#EAEAEA',
+                    color: '#fff',
                     width: '20%',
                     paddingRight: { xs: '20px', sm: '30px', md: '50px' },
                   }}
@@ -193,7 +193,7 @@ const About = () => {
                   min={0}
                   max={100}
                   step={1}
-                  sx={{ width: { xs: '50%', md: '60%' }, marginLeft: '16px' }}
+                  sx={{ width: { xs: '50%', md: '60%'}, marginLeft: '16px',  }}
                   valueLabelDisplay="auto"
                   onChange={(event, newValue) => handleSliderChange(event, newValue, index)}
                 />
@@ -214,7 +214,7 @@ const About = () => {
               display: 'grid',
               gridTemplateColumns: { xs: 'repeat(2, 1fr)', md: 'repeat(auto-fit, minmax(140px, 1fr))' },
               gap: '24px',
-              width: { xs: '100%', md: '40%' },
+              width: { xs: '100%', md: '45%' },
             }}
           >
             {[
@@ -263,14 +263,16 @@ const About = () => {
           display: "flex",
           flexDirection: "column",
           width: "100%",
-          height: "90vh",
+          height: "80vh",
           padding: 6,
           paddingLeft: 12,
           justifyContent: "center",
-          fontFamily: 'Poppins'
+          fontFamily: 'Poppins',
+          marginBottom: { xs: '16px', sm: '24px', md:'-20px' },
+          padding: { xs: '20px', sm: '40px', md: '80px' },
         }}
       >
-        <Typography variant="h3" fontFamily='Poppins' sx={{ marginBottom: 6, }}>
+        <Typography variant="h4" fontFamily='Poppins' sx={{ marginBottom: 4, }}>
           Education Background
         </Typography>
 
@@ -279,9 +281,9 @@ const About = () => {
         >
 
           <Box sx={{ width: "50%" }}>
-            <Typography variant="h4" fontFamily="Poppins" marginBottom={2} >
+            <Typography variant="h5" fontFamily="Poppins" marginBottom={2} >
               Higher Secondary Education:
-              <Divider style={{ backgroundColor: "white", width: "75%" }} />
+              <Divider style={{ backgroundColor: "white", width: "70%" }} />
             </Typography>
 
             <Timeline position="right">
@@ -319,9 +321,9 @@ const About = () => {
 
 
           <Box sx={{ width: "50%" }}>
-            <Typography variant="h4" fontFamily='Poppins' marginBottom={2}>
+            <Typography variant="h5" fontFamily='Poppins' marginBottom={2}>
               BSc(Hons) Computing:
-              <Divider style={{ backgroundColor: "white", width: "60%" }} />
+              <Divider style={{ backgroundColor: "white", width: "50%" }} />
             </Typography>
 
             <Timeline position="right">
@@ -381,20 +383,23 @@ const About = () => {
         component="section"
         sx={{
           width: '100%',
-          height: '80vh',
+          height: { xs: 'auto', md: '80vh' },
           backgroundColor: '#8689cd',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: 4,
           margin: 0,
+          flexDirection: { xs: 'column', md: 'row' },
+          padding: { xs: '20px', sm: '40px', md: '60px' },
+        
         }}
       >
 
         <Box
           sx={{
-            width: '50%',
-            display: 'flex',
+            width: { xs: '100%', md: '50%' },
+            display: {md:'flex', xs:'none'},
             alignItems: 'center',
             justifyContent: 'center',
             marginRight: '4',
@@ -415,14 +420,14 @@ const About = () => {
 
         <Box
           sx={{
-            width: '50%',
+            width: { xs: '100%', md: '50%' },
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'center',
             color: '#ffffff',
-            paddingLeft: 4,
-            marginRight: 16,
+            paddingLeft: { xs: 0, md: 4 },
+            marginRight: { xs: 0, md: 16 }, 
           }}
         >
           <Typography variant='h4' marginBottom={4} fontFamily='Poppins'>Designing Solutions, Not <br /> Just Visuals</Typography>
@@ -462,7 +467,7 @@ const About = () => {
             variant="contained"
             sx={{
               backgroundColor: '#FFD35A',
-              color: '#ffffff',
+              color: '#000',
               padding: '10px 20px',
 
             }}

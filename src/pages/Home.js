@@ -6,6 +6,7 @@ import Moon from '../pages/Moon';
 import { keyframes } from '@emotion/react';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 import portfolioData from '../utils/portfolioData.json'
+import { IoPlanet } from "react-icons/io5";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,7 +38,7 @@ const Home = () => {
     transition: 'opacity 0.5s ease-out, transform 1s ease-out',
   };
 
-  const generateRandomStars = (count) => {
+  const createRandomStars = (count) => {
     const stars = [];
     for (let i = 0; i < count; i++) {
       const top = Math.random() * 100;
@@ -48,11 +49,11 @@ const Home = () => {
     return stars;
   };
 
-  const stars = generateRandomStars(200); 
+  const stars = createRandomStars(200); 
 
-  const moveArrow = keyframes`
+  const saturn = keyframes`
     0% { transform: translateX(0); }
-    100% { transform: translateX(850px) translateY(-100px); } 
+    100% { transform: translateX(1000px) translateY(-250px); } 
   `;
 
   return (
@@ -116,9 +117,10 @@ const Home = () => {
           boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
           zIndex: 2,
           textAlign: 'left',
-          maxWidth: '600px',
-          right: '20%',
+          maxWidth: {md:'600px', xs:'600px'},
+          right: {md:'20%', xs:'0%'},
           mb: 10,
+         
         }}
       >
         <Typography
@@ -178,10 +180,11 @@ const Home = () => {
             marginTop: '0rem',
             fontSize: '2rem',
             color: '#fff',
-            animation: `${moveArrow} 10s linear infinite`, 
+            animation: `${saturn} 20s linear infinite`, 
           }}
         >
-          ➤
+          <IoPlanet/>
+         
         </Box>
       </Box>
       

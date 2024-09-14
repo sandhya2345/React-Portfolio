@@ -10,7 +10,7 @@
       "title": "About Me",
       "content": "Hello! I'm Sandhya Timalsena, an aspiring frontend developer with a growing passion for creating interactive and visually appealing web applications. As a beginner in React, I'm excited about the possibilities it offers for building dynamic user interfaces and managing state effectively. My journey in web development also includes a solid foundation in HTML, CSS, and JavaScript, where I enjoy crafting well-structured and responsive web pages.In addition to my frontend skills, I have experience with Django, a powerful Python web framework that I use to build robust backend systems. This blend of frontend and backend expertise allows me to create comprehensive web solutions, bridging the gap between user experience and server-side functionality.",
       "title2":"8+ Completed Projects",
-      "content2":"I’ve developed diverse projects using technologies like Node.js, HTML, CSS, and JavaScript, including websites and interactive platforms.",
+      "content2":"I've developed diverse projects using technologies like Node.js, HTML, CSS, and JavaScript, including websites and interactive platforms.",
       "title3":" Years of Experience",
       "content3":"Extensive hands-on experience in web development, complemented by internships where I gained valuable skills and knowledge in various technologies."
     },
@@ -96,11 +96,6 @@
         "email":"sandhyatimalsena29@gmail.com",
         "phone":"+977-9811078292"
       }
-    
-    
-
-
-    
     
   }
   
