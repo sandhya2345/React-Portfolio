@@ -129,7 +129,7 @@ const About = () => {
         </Box>
       </Box>
 
-      <Box
+      {/* <Box
         component="section"
         sx={{
           width: '100%',
@@ -250,7 +250,7 @@ const About = () => {
             ))}
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
 
 

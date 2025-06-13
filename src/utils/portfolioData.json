@@ -1,102 +1,90 @@
 {
   "home": {
     "name": "Sandhya Timalsena",
-    "descriptions": "I craft beautiful and interactive user interfaces using React, HTML, and CSS. Bringing designs to life with seamless animations and responsive layouts."
+    "descriptions": "I build full-stack web applications using React for dynamic, responsive interfaces and Django for powerful backend logic and APIs."
   },
-  
-
-  
-    "about": {
-      "title": "About Me",
-      "content": "Hello! I'm Sandhya Timalsena, an aspiring frontend developer with a growing passion for creating interactive and visually appealing web applications. As a beginner in React, I'm excited about the possibilities it offers for building dynamic user interfaces and managing state effectively. My journey in web development also includes a solid foundation in HTML, CSS, and JavaScript, where I enjoy crafting well-structured and responsive web pages.In addition to my frontend skills, I have experience with Django, a powerful Python web framework that I use to build robust backend systems. This blend of frontend and backend expertise allows me to create comprehensive web solutions, bridging the gap between user experience and server-side functionality.",
-      "title2":"8+ Completed Projects",
-      "content2":"I've developed diverse projects using technologies like Node.js, HTML, CSS, and JavaScript, including websites and interactive platforms.",
-      "title3":" Years of Experience",
-      "content3":"Extensive hands-on experience in web development, complemented by internships where I gained valuable skills and knowledge in various technologies."
+  "about": {
+    "title": "About Me",
+    "content": "Hello! I'm Sandhya Timalsena, a passionate web developer with a strong interest in creating interactive and visually engaging web applications. I specialize in both frontend and backend development using React and Django. I've completed internships as a React Intern at Sastra Network Solution Inc and as a Django Intern at Hunchha Digital, where I gained valuable real-world experience. My journey began with a strong foundation in HTML, CSS, and JavaScript, and I continue to build dynamic user interfaces and manage backend systems effectively. I am currently expanding my skills by learning .NET and Node.js to enhance my full-stack capabilities.",
+    "title2": "8+ Completed Projects",
+    "content2": "I've built diverse projects using technologies like React, Django, Node.js, HTML, CSS, and JavaScript — including websites, admin dashboards, and full-stack platforms.",
+    "title3": "2 Internships Completed",
+    "content3": "Hands-on experience in real-world development through internships at Sastra Network Solution Inc (React) and Hunchha Digital (Django), further strengthening my technical skills and problem-solving abilities."
+  },
+  "skills": [
+    {
+      "name": "HTML",
+      "proficiency": 90
     },
-
-    "skills": [
-      {
-        "name": "HTML",
-        "proficiency": 90
-      },
-      {
-        "name": "CSS",
-        "proficiency": 85
-      },
-      {
-        "name": "JavaScript",
-        "proficiency": 75
-      },
-      {
-        "name": "React",
-        "proficiency": 70
-      },
-
-      {
-        "name":"Django",
-        "proficiency":75
-      }
-    ],
-
-    "projects": [
-       {
-        "title":"MedAhead",
-        "image": "/assets/MedAhead.png",
-        "description":"MedAhead is a smart healthcare platform that helps people detect diseases early, manage doctor appointments, and access medical information — all in one place.It uses machine learning to predict diseases like diabetes, heart problems, kidney issues, and even pneumonia from X-rays. Users can also book appointments, chat with doctors in real-time, and get health tips, making MedAhead a simple, reliable, and modern health companion for everyone."
-      },
-      {
-        "title": "Pathyakarma",
-        "image": "/assets/PathyakarmaLanding.png",
-        "description": "The Pathyakrama website, created with Django and Tailwind CSS, serves as an educational platform featuring a college news section and a company section. It offers users up-to-date educational news and insights into key industry players, all within a clean and user-friendly design.",
-        "category": "Web Design"
-      },
-      {
-        "title": "PG Lifestyle",
-        "image":"/assets/PG_Lifestyle.png",
-        "description":"PG Lifestyle is a brand specializing in mattresses, sofas, and cushions. For this project, I worked on the frontend using HTML, Tailwind CSS, and JavaScript to create a visually appealing and responsive design. Additionally, I contributed to the backend using Django to ensure smooth functionality and integration with the website's features."
-      },
-      {
-        "title":"Pet Adoption Website",
-        "image": "/assets/petAdoption.png",
-        "description":"Help Me! is a pet adoption website developed as a second-year project. The site was built using HTML and SCSS for the frontend, creating a clean and stylish interface, while Node.js was used for the backend to manage functionality and data. The platform facilitates pet adoption by providing an intuitive interface for users to browse and adopt pets."
-      },
-      {
-        "title": "Lapbuy",
-        "image": "/assets/lapbuy.png",
-        "description": "Lapbuy is an e-commerce website focused on selling laptops. For this project, I worked on implementing authentication features and developing the About Us page. The site was built using Java with Eclipse for backend development and HTML/CSS for frontend design, ensuring a secure and user-friendly shopping experience."
-      },
-      {
-        "title": "Bonsai Hub",
-        "image":"/assets/Bonsai.png",
-        "description":"Bonsai Hub is an e-commerce website dedicated to selling bonsai trees. As the group leader, I led the development of the site using HTML, CSS, and JavaScript to create a seamless and visually appealing shopping experience. The platform offers a user-friendly interface for browsing and purchasing a variety of bonsai, reflecting both functionality and aesthetic design"
-      },
-     
-      {
-        "title": "Contentium Landing Page",
-        "image": "/assets/PG_Lifestyle.png",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      },
-      {
-        "title": "Bonsai Hub",
-        "image":"/assets/Bonsai.png",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      },
-      {
-        "title":"something",
-        "image": "/assets/pic1.jpg",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      }
-
-    ],
-
-    "contact": 
-      {
-        "intro":" Hi there, Looking forward to working with you!",
-        "desc":"   I'm eager to work with dedicated individuals and teams. I approach every project with full attention and a strong desire to learn and grow. Together, we can create something meaningful and impactful.",
-        "email":"sandhyatimalsena29@gmail.com",
-        "phone":"+977-9811078292"
-      }
-    
+    {
+      "name": "CSS",
+      "proficiency": 85
+    },
+    {
+      "name": "JavaScript",
+      "proficiency": 75
+    },
+    {
+      "name": "React",
+      "proficiency": 70
+    },
+    {
+      "name": "Django",
+      "proficiency": 75
+    }
+  ],
+  "projects": [
+    {
+      "title": "MedAhead",
+      "image": "/assets/MedAhead.png",
+      "description": "MedAhead is a smart healthcare platform that helps people detect diseases early, manage doctor appointments, and access medical information — all in one place.It uses machine learning to predict diseases like diabetes, heart problems, kidney issues, and even pneumonia from X-rays. Users can also book appointments, chat with doctors in real-time, and get health tips, making MedAhead a simple, reliable, and modern health companion for everyone."
+    },
+    {
+      "title": "Pathyakarma",
+      "image": "/assets/PathyakarmaLanding.png",
+      "description": "The Pathyakrama website, created with Django and Tailwind CSS, serves as an educational platform featuring a college news section and a company section. It offers users up-to-date educational news and insights into key industry players, all within a clean and user-friendly design.",
+      "category": "Web Design"
+    },
+    {
+      "title": "PG Lifestyle",
+      "image": "/assets/PG_Lifestyle.png",
+      "description": "PG Lifestyle is a brand specializing in mattresses, sofas, and cushions. For this project, I worked on the frontend using HTML, Tailwind CSS, and JavaScript to create a visually appealing and responsive design. Additionally, I contributed to the backend using Django to ensure smooth functionality and integration with the website's features."
+    },
+    {
+      "title": "Pet Adoption Website",
+      "image": "/assets/petAdoption.png",
+      "description": "Help Me! is a pet adoption website developed as a second-year project. The site was built using HTML and SCSS for the frontend, creating a clean and stylish interface, while Node.js was used for the backend to manage functionality and data. The platform facilitates pet adoption by providing an intuitive interface for users to browse and adopt pets."
+    },
+    {
+      "title": "Lapbuy",
+      "image": "/assets/lapbuy.png",
+      "description": "Lapbuy is an e-commerce website focused on selling laptops. For this project, I worked on implementing authentication features and developing the About Us page. The site was built using Java with Eclipse for backend development and HTML/CSS for frontend design, ensuring a secure and user-friendly shopping experience."
+    },
+    {
+      "title": "Bonsai Hub",
+      "image": "/assets/Bonsai.png",
+      "description": "Bonsai Hub is an e-commerce website dedicated to selling bonsai trees. As the group leader, I led the development of the site using HTML, CSS, and JavaScript to create a seamless and visually appealing shopping experience. The platform offers a user-friendly interface for browsing and purchasing a variety of bonsai, reflecting both functionality and aesthetic design"
+    },
+    {
+      "title": "Contentium Landing Page",
+      "image": "/assets/PG_Lifestyle.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "title": "Bonsai Hub",
+      "image": "/assets/Bonsai.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "title": "something",
+      "image": "/assets/pic1.jpg",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+  ],
+  "contact": {
+    "intro": " Hi there, Looking forward to working with you!",
+    "desc": "   I'm eager to work with dedicated individuals and teams. I approach every project with full attention and a strong desire to learn and grow. Together, we can create something meaningful and impactful.",
+    "email": "sandhyatimalsena29@gmail.com",
+    "phone": "+977-9811078292"
   }
-  
+}

@@ -164,7 +164,7 @@ const Home = () => {
           sx={{
             display: 'flex',
             gap: '2rem',
-            marginTop: '1rem',
+            marginTop: '3rem',
           }}
         >
           <a href="https://github.com/sandhya2345" target="_blank" rel="noopener noreferrer">
