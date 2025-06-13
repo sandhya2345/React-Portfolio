@@ -1,13 +1,14 @@
 {
+  "homepage": "https://sandhya2345.github.io/React-Portfolio",
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.0.2",
     "@mui/lab": "^6.0.0-beta.9",
-    "@mui/material": "^6.0.2",
+    "@mui/material": "^6.2.1",
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
     "@testing-library/jest-dom": "^5.14.1",
@@ -18,7 +19,7 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "three": "^0.168.0",
@@ -26,6 +27,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

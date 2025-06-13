@@ -30,7 +30,7 @@ const Projects = () => {
     : projects.filter((project) => project.category === filter);
 
   return (
-    <Container maxWidth={false} disableGutters sx={{ textAlign: 'center', padding: 4, backgroundColor: '#202020' }}>
+    <Container maxWidth={false} disableGutters sx={{ textAlign: 'center', padding: 4, backgroundColor: '#000' }}>
       <Typography variant="h4" component="div" color="#8689cd" gutterBottom>
         Portfolio
       </Typography>
@@ -88,7 +88,7 @@ const Projects = () => {
           >
             <Card sx={{
               width: '100%',
-              backgroundColor: '#1c1c1e',
+              backgroundColor: '#000',
               color: '#fff',
               borderRadius: '10px',
               overflow: 'hidden',
@@ -101,7 +101,7 @@ const Projects = () => {
               <CardMedia
                 component="img"
                 height="250"
-                image={project.image}
+                image={`${process.env.PUBLIC_URL}${project.image}`}
                 alt={project.title}
                 sx={{ objectFit: 'cover', transition: 'transform 0.5s', '&:hover': { transform: 'scale(1.1)' } }}
               />
@@ -109,7 +109,7 @@ const Projects = () => {
                 <Typography gutterBottom variant="h6" component="div" color="#ffffff">
                   {project.title}
                 </Typography>
-                <Accordion sx={{ backgroundColor: '#1c1c1e', boxShadow: 'none', color: '#fff', borderRadius: '0px' }}>
+                <Accordion sx={{ backgroundColor: '#000', boxShadow: 'none', color: '#fff', borderRadius: '0px' }}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon sx={{ color: '#FF3D00' }} />}
                     aria-controls={`panel-content-${index}`}

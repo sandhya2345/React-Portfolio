@@ -42,7 +42,7 @@
     "projects": [
       {
         "title": "Pathyakarma",
-        "image": "/assets/PathyakarmaLanding.png",
+        "image": "/assets/PathyakarmaLanding.PNG",
         "description": "The Pathyakrama website, created with Django and Tailwind CSS, serves as an educational platform featuring a college news section and a company section. It offers users up-to-date educational news and insights into key industry players, all within a clean and user-friendly design.",
         "category": "Web Design"
       },

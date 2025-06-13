@@ -30,7 +30,7 @@ const Contact = () => {
 `;
 
   return (
-    <Container maxWidth="lg"  sx={{ backgroundColor: '#202020', padding: '50px',  }}>
+    <Container maxWidth="lg"  sx={{ backgroundColor: '#000', padding: '50px',  }}>
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start', gap: 4, marginBottom: 4, fontFamily:'Poppins',  animation: `${fadeInUp} 1.5s ease-out`,  
               animationDelay: isVisible ? '0s' : '0s',
               animationFillMode: 'forwards' }}>

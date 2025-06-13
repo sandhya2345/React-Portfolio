@@ -43,13 +43,20 @@ const Home = () => {
     for (let i = 0; i < count; i++) {
       const top = Math.random() * 100;
       const left = Math.random() * 100;
-      const size = Math.random() * 2 + 1; 
-      stars.push({ top, left, size });
+      const size = Math.random() * 2 + 1;
+      const duration = Math.random() * 10 + 20; 
+      const delay = Math.random() * 5; 
+      stars.push({ top, left, size, duration, delay });
     }
     return stars;
   };
 
-  const stars = createRandomStars(200); 
+  const stars = createRandomStars(250); 
+
+  const moveStar = keyframes`
+  0% { transform: translateY(0px) translateX(0px); }
+  100% { transform: translateY(-100px) translateX(-100px); 
+`;
 
   const saturn = keyframes`
     0% { transform: translateX(0); }
@@ -67,7 +74,7 @@ const Home = () => {
         position: 'relative',
         zIndex: 2,
         height: '85vh',
-        backgroundColor: '#202020',
+        backgroundColor: '#000',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -92,21 +99,23 @@ const Home = () => {
       </Canvas>
 
       {stars.map((star, index) => (
-        <Box
-          key={index}
-          sx={{
-            position: 'absolute',
-            top: `${star.top}%`,
-            left: `${star.left}%`,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            backgroundColor: 'white',
-            borderRadius: '50%',
-            boxShadow: '0 0 5px rgba(255, 255, 255, 0.8)',
-            zIndex: 0,
-          }}
-        />
-      ))}
+      <Box
+        key={index}
+        sx={{
+          position: 'absolute',
+          top: `${star.top}%`,
+          left: `${star.left}%`,
+          width: `${star.size}px`,
+          height: `${star.size}px`,
+          backgroundColor: 'white',
+          borderRadius: '50%',
+          boxShadow: '0 0 5px rgba(255, 255, 255, 0.8)',
+          zIndex: 0,
+          animation: `${moveStar} ${star.duration}s linear infinite`,
+          animationDelay: `${star.delay}s`,
+        }}
+      />
+    ))}
 
       <Box
         sx={{
@@ -180,7 +189,7 @@ const Home = () => {
             marginTop: '0rem',
             fontSize: '2rem',
             color: '#fff',
-            animation: `${saturn} 20s linear infinite`, 
+            animation: `${saturn} 40s linear infinite`, 
           }}
         >
           <IoPlanet/>
