@@ -406,7 +406,7 @@ const About = () => {
           }}
         >
           <img
-            src="/assets/Women.png"
+            src="/public/assets/Women.png"
             alt="Woman posing"
             style={{
               width: '60%',
@@ -450,7 +450,7 @@ const About = () => {
 
           <Box
             sx={{
-              backgroundColor: '#F5F7F8',
+              backgroundColor: '',
               padding: 2,
               borderRadius: 2,
               marginBottom: 3,
