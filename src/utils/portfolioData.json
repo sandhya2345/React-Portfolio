@@ -40,6 +40,11 @@
     ],
 
     "projects": [
+       {
+        "title":"MedAhead",
+        "image": "/assets/MedAhead.png",
+        "description":"MedAhead is a smart healthcare platform that helps people detect diseases early, manage doctor appointments, and access medical information — all in one place.It uses machine learning to predict diseases like diabetes, heart problems, kidney issues, and even pneumonia from X-rays. Users can also book appointments, chat with doctors in real-time, and get health tips, making MedAhead a simple, reliable, and modern health companion for everyone."
+      },
       {
         "title": "Pathyakarma",
         "image": "/assets/PathyakarmaLanding.png",
@@ -66,11 +71,7 @@
         "image":"/assets/Bonsai.png",
         "description":"Bonsai Hub is an e-commerce website dedicated to selling bonsai trees. As the group leader, I led the development of the site using HTML, CSS, and JavaScript to create a seamless and visually appealing shopping experience. The platform offers a user-friendly interface for browsing and purchasing a variety of bonsai, reflecting both functionality and aesthetic design"
       },
-      {
-        "title":"something",
-        "image": "/assets/pic1.jpg",
-        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      },
+     
       {
         "title": "Contentium Landing Page",
         "image": "/assets/PG_Lifestyle.png",
