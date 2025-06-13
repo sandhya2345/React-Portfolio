@@ -384,7 +384,7 @@ const About = () => {
         sx={{
           width: '100%',
           height: { xs: 'auto', md: '80vh' },
-         
+          // backgroundColor: '#8689cd',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
