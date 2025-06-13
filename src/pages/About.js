@@ -384,7 +384,7 @@ const About = () => {
         sx={{
           width: '100%',
           height: { xs: 'auto', md: '80vh' },
-          backgroundColor: '#8689cd',
+         
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -450,7 +450,7 @@ const About = () => {
 
           <Box
             sx={{
-              backgroundColor: '',
+              backgroundColor: '#F5F7F8',
               padding: 2,
               borderRadius: 2,
               marginBottom: 3,
