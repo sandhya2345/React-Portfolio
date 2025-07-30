@@ -128,7 +128,7 @@ const Home = () => {
           textAlign: 'left',
           maxWidth: {md:'600px', xs:'600px'},
           right: {md:'20%', xs:'0%'},
-          mb: 10,
+          mb: 6,
          
         }}
       >
