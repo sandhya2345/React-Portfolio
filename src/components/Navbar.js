@@ -12,31 +12,31 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar 
-        position="static" 
-        color="transparent" 
-        elevation={0} 
-        style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          position: 'relative', 
-          fontFamily: 'Poppins, sans-serif', 
-          padding: '10px 0' 
+      <AppBar
+        position="static"
+        color="transparent"
+        elevation={0}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'relative',
+          fontFamily: 'Poppins, sans-serif',
+          padding: '10px 0'
         }}
       >
         <Toolbar style={{ width: '100%', maxWidth: 1200, alignItems: 'center', justifyContent: 'center' }}>
-          <IconButton 
-            edge="end" 
-            color="inherit" 
-            aria-label="menu" 
-            onClick={toggleNavbar} 
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleNavbar}
             style={{ position: 'absolute', right: 16 }}
           >
             <MenuIcon style={{ fontSize: '38px', color: '#ffffff' }} />
           </IconButton>
 
-          <div 
+          <div
             style={{
               display: isNavVisible ? 'flex' : 'none',
               width: '100%',
@@ -44,27 +44,31 @@ const Navbar = () => {
               alignItems: 'center',
               transition: 'opacity 0.5s ease-out',
               gap: '8rem',
-              fontFamily: 'Poppins, sans-serif'
+              fontFamily: 'Poppins, sans-serif',
+              
             }}
           >
-            {['Home', 'About', 'Projects', 'Contact'].map((text, i) => (
-              <Button
-                key={i}
-                component={Link}
-                to={`/${text.toLowerCase()}`}
-                style={{
-                  fontSize: '20px',
-                  color: '#ffffff',
-                  textTransform: 'none',
-                  fontWeight: 500,
-                  transition: 'all 0.3s',
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#90caf9'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
-              >
-                {text}
-              </Button>
-            ))}
+            {['Home', 'About', 'Projects', 'Contact'].map((text, i) => {
+              const path = text === 'Home' ? '/' : `/${text.toLowerCase()}`;
+              return (
+                <Button
+                  key={i}
+                  component={Link}
+                  to={path}
+                  style={{
+                    fontSize: '18px',
+                    color: '#ffffff',
+                    textTransform: 'none',
+                    fontWeight: 500,
+                    transition: 'all 0.3s',
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#90caf9'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
+                >
+                  {text}
+                </Button>
+              );
+            })}
           </div>
         </Toolbar>
       </AppBar>
